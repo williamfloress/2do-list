@@ -99,12 +99,12 @@ CREATE TRIGGER update_todos_updated_at
 ### 2. Authentication - Frontend
 
 #### 2.1 Create Authentication Service
-- [ ] Create `src/services/authService.js`
-- [ ] Implement signup function
-- [ ] Implement login function
-- [ ] Implement logout function
-- [ ] Implement getCurrentUser function
-- [ ] Add error handling
+- [x] Create `src/services/authService.js`
+- [x] Implement signup function
+- [x] Implement login function
+- [x] Implement logout function
+- [x] Implement getCurrentUser function
+- [x] Add error handling
 
 **Example authService.js:**
 ```javascript
@@ -154,13 +154,13 @@ export const authService = {
 ```
 
 #### 2.2 Create Auth Context/Store
-- [ ] Create `src/store/authStore.js` (if using Zustand)
+- [x] Create `src/store/authStore.js` (if using Zustand)
 - [ ] OR Create `src/context/AuthContext.jsx` (if using Context API)
-- [ ] Define auth state (user, loading, error)
-- [ ] Implement login action
-- [ ] Implement signup action
-- [ ] Implement logout action
-- [ ] Implement session persistence
+- [x] Define auth state (user, loading, error)
+- [x] Implement login action
+- [x] Implement signup action
+- [x] Implement logout action
+- [x] Implement session persistence
 
 **Example with Zustand:**
 ```javascript
@@ -216,27 +216,27 @@ export const useAuthStore = create((set) => ({
 ```
 
 #### 2.3 Update Login Page
-- [ ] Import authService or useAuthStore
-- [ ] Connect form to login function
-- [ ] Add loading state
-- [ ] Add error messages
-- [ ] Redirect to dashboard on success
-- [ ] Add form validation
+- [x] Import authService or useAuthStore
+- [x] Connect form to login function
+- [x] Add loading state
+- [x] Add error messages
+- [x] Redirect to dashboard on success
+- [x] Add form validation
 
 #### 2.4 Update Register Page
-- [ ] Import authService or useAuthStore
-- [ ] Connect form to signup function
-- [ ] Add loading state
-- [ ] Add error messages
-- [ ] Add email confirmation message
-- [ ] Redirect to login/dashboard on success
-- [ ] Add form validation
+- [x] Import authService or useAuthStore
+- [x] Connect form to signup function
+- [x] Add loading state
+- [x] Add error messages
+- [x] Add email confirmation message
+- [x] Redirect to login/dashboard on success
+- [x] Add form validation
 
 #### 2.5 Create Protected Route Component
-- [ ] Create `src/components/ProtectedRoute.jsx`
-- [ ] Check if user is authenticated
-- [ ] Redirect to login if not authenticated
-- [ ] Show loading state while checking auth
+- [x] Create `src/components/ProtectedRoute.jsx`
+- [x] Check if user is authenticated
+- [x] Redirect to login if not authenticated
+- [x] Show loading state while checking auth
 
 **Example ProtectedRoute:**
 ```javascript
@@ -261,10 +261,10 @@ export default ProtectedRoute;
 ```
 
 #### 2.6 Update App.jsx with Protected Routes
-- [ ] Import ProtectedRoute component
-- [ ] Wrap Dashboard route with ProtectedRoute
-- [ ] Add auth state listener
-- [ ] Handle session restoration on page reload
+- [x] Import ProtectedRoute component
+- [x] Wrap Dashboard route with ProtectedRoute
+- [x] Add auth state listener
+- [x] Handle session restoration on page reload
 
 ---
 
@@ -315,12 +315,12 @@ export const authMiddleware = async (req, res, next) => {
 ### 4. Todo CRUD Operations - Frontend
 
 #### 4.1 Create Todo Service
-- [ ] Create `src/services/todoService.js`
-- [ ] Implement getTodos function
-- [ ] Implement createTodo function
-- [ ] Implement updateTodo function
-- [ ] Implement deleteTodo function
-- [ ] Add error handling
+- [x] Create `src/services/todoService.js`
+- [x] Implement getTodos function
+- [x] Implement createTodo function
+- [x] Implement updateTodo function
+- [x] Implement deleteTodo function
+- [x] Add error handling
 
 **Example todoService.js:**
 ```javascript
@@ -388,116 +388,116 @@ export const todoService = {
 ```
 
 #### 4.2 Create Todo Store/Context
-- [ ] Create `src/store/todoStore.js` (if using Zustand)
-- [ ] Define todos state
-- [ ] Implement fetchTodos action
-- [ ] Implement addTodo action
-- [ ] Implement updateTodo action
-- [ ] Implement deleteTodo action
-- [ ] Implement toggleTodo action
+- [x] Create `src/store/todoStore.js` (if using Zustand)
+- [x] Define todos state
+- [x] Implement fetchTodos action
+- [x] Implement addTodo action
+- [x] Implement updateTodo action
+- [x] Implement deleteTodo action
+- [x] Implement toggleTodo action
 
 #### 4.3 Update TaskForm Component
-- [ ] Import todoService or useTodoStore
-- [ ] Connect form to createTodo function
-- [ ] Add loading state
-- [ ] Add error handling
-- [ ] Clear form after success
-- [ ] Show success message
+- [x] Import todoService or useTodoStore
+- [x] Connect form to createTodo function
+- [x] Add loading state
+- [x] Add error handling
+- [x] Clear form after success
+- [x] Show success message
 
 #### 4.4 Update TaskList Component
-- [ ] Import todoService or useTodoStore
-- [ ] Fetch todos on component mount
-- [ ] Replace placeholder data with real data
-- [ ] Add loading state
-- [ ] Add empty state
-- [ ] Add error handling
+- [x] Import todoService or useTodoStore
+- [x] Fetch todos on component mount
+- [x] Replace placeholder data with real data
+- [x] Add loading state
+- [x] Add empty state
+- [x] Add error handling
 
 #### 4.5 Update TaskItem Component
-- [ ] Connect toggle checkbox to toggleTodo function
-- [ ] Connect delete button to deleteTodo function
-- [ ] Add loading state for actions
-- [ ] Add confirmation dialog for delete
-- [ ] Show success/error messages
+- [x] Connect toggle checkbox to toggleTodo function
+- [x] Connect delete button to deleteTodo function
+- [x] Add loading state for actions
+- [x] Add confirmation dialog for delete
+- [x] Show success/error messages
 
 ---
 
 ### 5. Todo CRUD Operations - Backend (Optional)
 
 #### 5.1 Create Todo Controller
-- [ ] Create `controllers/todoController.js`
-- [ ] Implement getTodos function
-- [ ] Implement createTodo function
-- [ ] Implement updateTodo function
-- [ ] Implement deleteTodo function
-- [ ] Add validation
-- [ ] Add error handling
+- [x] Create `controllers/todoController.js`
+- [x] Implement getTodos function
+- [x] Implement createTodo function
+- [x] Implement updateTodo function
+- [x] Implement deleteTodo function
+- [x] Add validation
+- [x] Add error handling
 
 #### 5.2 Create Todo Routes
-- [ ] Create `routes/todoRoutes.js`
-- [ ] Define GET /api/todos route
-- [ ] Define POST /api/todos route
-- [ ] Define PUT /api/todos/:id route
-- [ ] Define DELETE /api/todos/:id route
-- [ ] Apply auth middleware to all routes
+- [x] Create `routes/todoRoutes.js`
+- [x] Define GET /api/todos route
+- [x] Define POST /api/todos route
+- [x] Define PUT /api/todos/:id route
+- [x] Define DELETE /api/todos/:id route
+- [x] Apply auth middleware to all routes
 
 #### 5.3 Update Server.js
-- [ ] Import todo routes
-- [ ] Mount todo routes at /api/todos
-- [ ] Test all endpoints
+- [x] Import todo routes
+- [x] Mount todo routes at /api/todos
+- [x] Test all endpoints
 
 ---
 
 ### 6. Update Navbar Component
 
 #### 6.1 Add User Info Display
-- [ ] Show logged-in user email
-- [ ] Add user avatar/icon
-- [ ] Style user info section
+- [x] Show logged-in user email
+- [x] Add user avatar/icon
+- [x] Style user info section
 
 #### 6.2 Connect Logout Button
-- [ ] Import authService or useAuthStore
-- [ ] Connect logout button to logout function
-- [ ] Redirect to login page after logout
-- [ ] Show confirmation dialog (optional)
+- [x] Import authService or useAuthStore
+- [x] Connect logout button to logout function
+- [x] Redirect to login page after logout
+- [x] Show confirmation dialog (optional)
 
 ---
 
 ### 7. Add Loading States & Error Handling
 
 #### 7.1 Create Loading Component
-- [ ] Create `src/components/Loading.jsx`
-- [ ] Add spinner or skeleton
-- [ ] Style with TailwindCSS
+- [x] Create `src/components/Loading.jsx`
+- [x] Add spinner or skeleton
+- [x] Style with TailwindCSS
 
 #### 7.2 Create Error Component
-- [ ] Create `src/components/ErrorMessage.jsx`
-- [ ] Display error messages
-- [ ] Add retry button
-- [ ] Style with TailwindCSS
+- [x] Create `src/components/ErrorMessage.jsx`
+- [x] Display error messages
+- [x] Add retry button
+- [x] Style with TailwindCSS
 
 #### 7.3 Add Loading States
-- [ ] Add loading to Login page
-- [ ] Add loading to Register page
-- [ ] Add loading to Dashboard
-- [ ] Add loading to TaskForm
-- [ ] Add loading to TaskList
+- [x] Add loading to Login page
+- [x] Add loading to Register page
+- [x] Add loading to Dashboard
+- [x] Add loading to TaskForm
+- [x] Add loading to TaskList
 
 #### 7.4 Add Error Handling
-- [ ] Add error handling to all API calls
-- [ ] Display user-friendly error messages
-- [ ] Add error boundaries (optional)
+- [x] Add error handling to all API calls
+- [x] Display user-friendly error messages
+- [x] Add error boundaries (optional)
 
 ---
 
 ### 8. Real-time Updates (Optional)
 
 #### 8.1 Set Up Supabase Realtime
-- [ ] Enable Realtime on todos table
-- [ ] Subscribe to changes in Dashboard
-- [ ] Handle INSERT events
-- [ ] Handle UPDATE events
-- [ ] Handle DELETE events
-- [ ] Update UI in real-time
+- [x] Enable Realtime on todos table
+- [x] Subscribe to changes in Dashboard
+- [x] Handle INSERT events
+- [x] Handle UPDATE events
+- [x] Handle DELETE events
+- [x] Update UI in real-time
 
 **Example Realtime subscription:**
 ```javascript
@@ -524,61 +524,62 @@ useEffect(() => {
 ### 9. Form Validation
 
 #### 9.1 Install Validation Library (Optional)
-- [ ] Choose library (Yup, Zod, or native HTML5)
-- [ ] Install if needed: `npm install yup`
+- [x] Choose library (Yup, Zod, or native HTML5)
+- [x] Install if needed: `npm install yup`
 
 #### 9.2 Add Validation to Login
-- [ ] Validate email format
-- [ ] Validate password length
-- [ ] Show validation errors
-- [ ] Disable submit if invalid
+- [x] Validate email format
+- [x] Validate password length
+- [x] Show validation errors
+- [x] Disable submit if invalid
 
 #### 9.3 Add Validation to Register
-- [ ] Validate email format
-- [ ] Validate password length (min 6 characters)
-- [ ] Validate password confirmation match
-- [ ] Show validation errors
-- [ ] Disable submit if invalid
+- [x] Validate email format
+- [x] Validate password length (min 6 characters)
+- [x] Validate password confirmation match
+- [x] Show validation errors
+- [x] Disable submit if invalid
 
 #### 9.4 Add Validation to TaskForm
-- [ ] Validate title is not empty
-- [ ] Validate title length (max characters)
-- [ ] Show validation errors
-- [ ] Disable submit if invalid
+- [x] Validate title is not empty
+- [x] Validate title length (max characters)
+- [x] Show validation errors
+- [x] Disable submit if invalid
 
 ---
 
 ### 10. UI/UX Improvements
 
 #### 10.1 Add Toast Notifications
-- [ ] Install toast library: `npm install react-hot-toast`
-- [ ] Set up Toaster in App.jsx
-- [ ] Add success toasts (todo created, updated, deleted)
-- [ ] Add error toasts
-- [ ] Add info toasts (logged in, logged out)
+- [x] Install toast library: `npm install react-hot-toast`
+- [x] Set up Toaster in App.jsx
+- [x] Add success toasts (todo created, updated, deleted)
+- [x] Add error toasts
+- [x] Add info toasts (logged in, logged out)
 
 #### 10.2 Add Confirmation Dialogs
-- [ ] Create Modal component (or use library)
-- [ ] Add confirmation before delete
-- [ ] Add confirmation before logout (optional)
+- [x] Create Modal component (or use library)
+- [x] Add confirmation before delete
+- [x] Add confirmation before logout (optional)
 
 #### 10.3 Add Animations
-- [ ] Add transitions to todo items
-- [ ] Add fade-in for new todos
-- [ ] Add slide-out for deleted todos
-- [ ] Add loading animations
+- [x] Add transitions to todo items
+- [x] Add fade-in for new todos
+- [x] Add slide-out for deleted todos
+- [x] Add loading animations
 
 #### 10.4 Improve Responsive Design
-- [ ] Test on mobile devices
-- [ ] Adjust navbar for mobile
-- [ ] Adjust task list for mobile
-- [ ] Adjust forms for mobile
+- [x] Test on mobile devices
+- [x] Adjust navbar for mobile
+- [x] Adjust task list for mobile
+- [x] Adjust forms for mobile
 
 ---
 
 ### 11. Testing Phase 2
 
 #### 11.1 Authentication Tests
+- [x] **Testing plan created** (see `frontend/TESTING_PLAN.md`)
 - [ ] Test signup with valid data
 - [ ] Test signup with invalid data
 - [ ] Test login with valid credentials
@@ -586,6 +587,11 @@ useEffect(() => {
 - [ ] Test logout
 - [ ] Test protected routes (without login)
 - [ ] Test session persistence (page reload)
+
+**Testing Resources:**
+- 📄 Comprehensive test plan: `frontend/TESTING_PLAN.md`
+- 🧪 All test cases documented with step-by-step instructions
+- ✅ Expected results defined for each test
 
 #### 11.2 CRUD Tests
 - [ ] Test creating a todo
